@@ -1,13 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf8 -*-
-"""stuffhere"""
-
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/aboutme")
-def hello():
-    return "<h1> Hello Folks</h1>"
 
-#add stuff
+
+@app.route('/aboutme', methods=['GET'])
+def about_me():
+    heres_me={'firstname': 'Gary', 'lastname': 'M.', 'hobbies': 'pc-gaming' }
+    return (heres_me)
